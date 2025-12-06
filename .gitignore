@@ -13,3 +13,6 @@ wheels/
 .vscode/
 .idea/
 .mypy_cache/
+
+# volumes
+redis-data/
