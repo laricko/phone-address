@@ -1,6 +1,5 @@
 from pydantic import BaseModel, Field
 
-
 PHONE_NUMBER_PATTERN = r"^\+?[1-9]\d{6,14}$"
 
 

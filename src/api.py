@@ -35,16 +35,12 @@ def get_address_service(
 
 
 @app.exception_handler(AddressNotFound)
-async def handle_not_found(
-    request: Request, exc: AddressNotFound
-) -> JSONResponse:
+async def handle_not_found(request: Request, exc: AddressNotFound) -> JSONResponse:
     return JSONResponse(status_code=404, content={"detail": str(exc)})
 
 
 @app.exception_handler(AddressAlreadyExists)
-async def handle_conflict(
-    request: Request, exc: AddressAlreadyExists
-) -> JSONResponse:
+async def handle_conflict(request: Request, exc: AddressAlreadyExists) -> JSONResponse:
     return JSONResponse(status_code=409, content={"detail": str(exc)})
 
 

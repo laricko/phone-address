@@ -11,15 +11,6 @@ docker compose up --build
    ```
 2. API будет доступно по адресу `http://localhost:8000`.
 
-### Локально
-1. Установите зависимости:
-   ```bash
-pip install .
-   ```
-2. Запустите приложение:
-   ```bash
-REDIS_URL=redis://localhost:6379/0 uvicorn src.api:app --reload
-   ```
 
 ## Эндпоинты
 - `GET /addresses/{phone}` — получить адрес по номеру телефона.
