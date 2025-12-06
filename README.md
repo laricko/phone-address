@@ -6,9 +6,9 @@
 
 ### Docker Compose
 1. Соберите и запустите сервис и Redis:
-   ```bash
+```bash
 docker compose up --build
-   ```
+```
 2. API будет доступно по адресу `http://localhost:8000`.
 
 
