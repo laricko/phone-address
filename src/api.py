@@ -1,4 +1,5 @@
 import os
+from typing import AsyncGenerator
 
 import redis.asyncio as redis
 from fastapi import Depends, FastAPI, Request
@@ -12,7 +13,7 @@ from services import AddressPhoneService
 app = FastAPI()
 
 
-async def get_redis_client() -> redis.Redis:
+async def get_redis_client() -> AsyncGenerator[redis.Redis]:
     redis_url = os.getenv("REDIS_URL", "redis://localhost:6379/0")
     client = redis.from_url(redis_url, decode_responses=True)
     try:

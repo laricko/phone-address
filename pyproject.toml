@@ -17,3 +17,7 @@ dev = [
     "mypy>=1.19.0",
     "pytest>=9.0.1",
 ]
+
+[tool.mypy]
+mypy_path = "src"
+python_version = "3.13"

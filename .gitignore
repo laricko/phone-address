@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Linters and formatters
+.vscode/
+.idea/
+.mypy_cache/
