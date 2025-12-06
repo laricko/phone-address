@@ -16,4 +16,11 @@ docker compose up --build
 - `GET /addresses/{phone}` — получить адрес по номеру телефона.
 - `POST /addresses/` — создать связку (поля `phone_number`, `address`).
 - `PUT /addresses/{phone}` — обновить адрес (тело: `address`).
-- `DELETE /addresses/{phone}` — удалить запись.
+- `DELETE /addresses/{phone}` — удалить запись.`
+
+
+## Тестирование и линтинг
+
+- uv run mypy src
+- uv run black src
+- uv run isort src
