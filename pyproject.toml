@@ -1,0 +1,10 @@
+[project]
+name = "phone-address"
+version = "0.1.0"
+description = "Simple microservice for phone and address tracking."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.123.10",
+    "redis>=7.1.0",
+]

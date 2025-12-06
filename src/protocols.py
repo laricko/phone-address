@@ -1,0 +1,13 @@
+from typing import Protocol
+
+from models import AddressPhone
+
+
+class AddressPhoneRepositoryProtocol(Protocol):
+    async def get_by_phone_number(self, phone_number: str) -> AddressPhone | None: ...
+
+    async def create(self, address: AddressPhone) -> AddressPhone: ...
+
+    async def update(self, address: AddressPhone) -> AddressPhone: ...
+
+    async def delete(self, phone_number: str) -> None: ...
