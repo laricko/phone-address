@@ -17,7 +17,7 @@ class AddressPhoneService:
         stored = await self.address_phone_repository.get_by_phone_number(
             address.phone_number
         )
-        if stored is not None:
+        if stored:
             raise AddressAlreadyExists(address.phone_number)
         return await self.address_phone_repository.create(address)
 
