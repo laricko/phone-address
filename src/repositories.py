@@ -3,10 +3,9 @@ from __future__ import annotations
 import redis.asyncio as redis
 
 from models import AddressPhone
-from protocols import AddressPhoneRepositoryProtocol
 
 
-class AddressPhoneRepository(AddressPhoneRepositoryProtocol):
+class AddressPhoneRepository:
     def __init__(self, client: redis.Redis, *, prefix: str = "address"):
         self.client = client
         self.prefix = prefix
